@@ -33,6 +33,7 @@ import org.json.JSONObject;
 import gson.Forecast;
 import gson.Weather;
 //import com.coolweather.android.service.AutoUpdateService;
+import service.AutoUpdateService;
 import util.HttpUtil;
 import util.Utility;
 
@@ -261,8 +262,8 @@ public class WeatherActivity extends AppCompatActivity {
         carWashText.setText(carWash);
         sportText.setText(sport);
         weatherLayout.setVisibility(View.VISIBLE);
-        /*Intent intent = new Intent(this, AutoUpdateService.class);
-        startService(intent);*/
+        Intent intent = new Intent(this, AutoUpdateService.class);
+        startService(intent);
     }
 
 }
